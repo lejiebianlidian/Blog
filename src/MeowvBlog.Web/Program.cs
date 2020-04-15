@@ -1,17 +1,44 @@
-﻿using Microsoft.AspNetCore;
+using MeowvBlog.Web.Hubs;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
+using System.Threading.Tasks;
 
 namespace MeowvBlog.Web
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            await Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(builder =>
+            {
+                builder.ConfigureKestrel(options => { options.AddServerHeader = false; })
+                       .UseUrls("http://*:5001")
+                       .UseStartup<Program>();
+            }).Build().RunAsync();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddControllersWithViews();
+            services.AddSignalR();
+            services.AddSingleton(HtmlEncoder.Create(new[] { UnicodeRanges.BasicLatin, UnicodeRanges.CjkUnifiedIdeographs }));
+        }
+
+        public void Configure(IApplicationBuilder app)
+        {
+            app.UseStatusCodePages();
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+                endpoints.MapHub<ConnectionHub>("/connection");
+            });
+        }
     }
 }
