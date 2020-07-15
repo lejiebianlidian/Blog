@@ -1,99 +1,99 @@
-# 😍阿星Plus⭐⭐⭐
+# 🤣阿星Plus⭐⭐⭐
 
-## Intro
+## 项目介绍
 
-预览：[https://meowv.com](https://meowv.com)
+此版本个人博客项目底层基于 [abp vNext](http://abp.io/) (不完全依赖)搭建，和免费开源跨平台的 .NET Core 3.1 开发，支持各种主流数据库(SqlServer、MySQL、PostgreSql、Sqlite)一键切换，遵循 RESTful 接口规范，前端使用 Blazor 开发，可作为 .NET Core 入门项目进行学习。
+
+If you liked `Blog` project or if it helped you, please give a star ⭐️ for this repository. 👍👍👍
+
+## 微信公众号
+
+欢迎关注微信公众号：阿星Plus
+
+![微信公众号：阿星Plus](static/qrcode.jpg)
+
+## 系列文章
+
+1. **[使用 abp cli 搭建项目](https://mp.weixin.qq.com/s/3Sc4Z2xkLdQNErvXf92B9A)**
+2. **[给项目瘦身，让它跑起来](https://mp.weixin.qq.com/s/oc96GG2sxz0J_vT6sReojQ)**
+3. **[完善与美化，Swagger登场](https://mp.weixin.qq.com/s/usz1BRYzBO2tT_z9MaonPg)**
+4. **[数据访问和代码优先](https://mp.weixin.qq.com/s/OHBW24PSNIeOARnHlbWBNQ)**
+5. **[自定义仓储之增删改查](https://mp.weixin.qq.com/s/ObgAtdWe3-nZw6hWC5dhyg)**
+6. **[统一规范API，包装返回模型](https://mp.weixin.qq.com/s/uVsFiKjbiHX5lKAhuZ2E9g)**
+7. **[再说Swagger，分组、描述、小绿锁](https://mp.weixin.qq.com/s/cNB469s18plbCLbHxL1QUA)**
+8. **[接入GitHub，用JWT保护你的API](https://mp.weixin.qq.com/s/ZOX9D4ncqqeXxipYapTeBA)**
+9. **[异常处理和日志记录](https://mp.weixin.qq.com/s/segjYoh1rMI372PKi-ap6w)**
+10. **[使用Redis缓存数据](https://mp.weixin.qq.com/s/fTqDnwVUgqKnwz21AsETGA)**
+11. **[集成Hangfire实现定时任务处理](https://mp.weixin.qq.com/s/wRITvM72JveP7ozx2tDL4A)**
+12. **[用AutoMapper搞定对象映射](https://mp.weixin.qq.com/s/VO0qKlOg90kb27XGcpGjqw)**
+13. **[定时任务最佳实战（一）](https://mp.weixin.qq.com/s/DkGuy4jJ629ARh5gMq5I_Q)**
+14. **[定时任务最佳实战（二）](https://mp.weixin.qq.com/s/vGg14QchfUjNcNuOBfw7Tg)**
+15. **[定时任务最佳实战（三）](https://mp.weixin.qq.com/s/rFvsLuqZtdUnkqxRhN29rw)**
+16. **[博客接口实战篇（一）](https://mp.weixin.qq.com/s/5tTMKfZvXvi1Z7NJ3yZdvg)**
+17. **[博客接口实战篇（二）](https://mp.weixin.qq.com/s/2nmw2td01cEhqBCc32FUYw)**
+18. **[博客接口实战篇（三）](https://mp.weixin.qq.com/s/B0AwLunJ6xSqJzXwE_qJSg)**
+19. **[博客接口实战篇（四）](https://mp.weixin.qq.com/s/3V7Q-RvaxEiopXR73YpG5Q)**
+20. **[博客接口实战篇（五）](https://mp.weixin.qq.com/s/B3jvHCtKotmmlcAKYxL9Lw)**
+21. **[Blazor 实战系列（一）](https://mp.weixin.qq.com/s/gtnZ74ItGmocpxDcOVswng)**
+22. **[Blazor 实战系列（二）](https://mp.weixin.qq.com/s/RVX94RPnEteHouz_0BDayw)**
+23. **[Blazor 实战系列（三）](https://mp.weixin.qq.com/s/9pC456tnmjJNMS55aEe9Qg)**
+24. **[Blazor 实战系列（四）](https://mp.weixin.qq.com/s/Y0zGpc4L2eAvUd0ba6Hbkg)**
+25. **[Blazor 实战系列（五）](https://mp.weixin.qq.com/s/dj4ubCqqjCWRc6mXPsgqBw)**
+26. **[Blazor 实战系列（六）](https://mp.weixin.qq.com/s/-W3JQHOxYLYxAb13ZSVhnQ)**
+27. **[Blazor 实战系列（七）](https://mp.weixin.qq.com/s/q1BHEk8TNRRczBGRGecBPw)**
+28. **[Blazor 实战系列（八）](https://mp.weixin.qq.com/s/ZCYJa3f3HYPclM6bpmynNA)**
+29. **[Blazor 实战系列（九）](https://mp.weixin.qq.com/s/0-mMmkr3HelmoJUWN7R7JA)**
+30. **[终结篇之发布项目](https://mp.weixin.qq.com/s/Lf543XOxSIGYdOGM8Zt4Lw)**
+
+```tree
+Blog ---------- root
+ ├── .dockerignore ---------- docker ignore
+ ├── .gitattributes ---------- git attributes
+ ├── .gitignore ---------- git ignore
+ ├── common.props ---------- common.props
+ ├── Dockerfile ---------- Dockerfile
+ ├── LICENSE ---------- LICENSE
+ ├── Meowv.Blog.sln ---------- Solution
+ ├── README.md ---------- README.md
+ ├── src
+ │   ├── Meowv.Blog.Application ---------- Application
+ │   ├── Meowv.Blog.Application.Caching ---------- Application.Caching
+ │   ├── Meowv.Blog.Application.Contracts ---------- Application.Contracts
+ │   ├── Meowv.Blog.BackgroundJobs ---------- BackgroundJobs
+ │   ├── Meowv.Blog.BlazorApp ---------- Blazor App
+ │   ├── Meowv.Blog.Domain ---------- Domain
+ │   ├── Meowv.Blog.Domain.Shared ---------- Domain.Shared
+ │   ├── Meowv.Blog.EntityFrameworkCore ---------- EntityFrameworkCore
+ │   ├── Meowv.Blog.EntityFrameworkCore.DbMigrations ---------- EntityFrameworkCore.DbMigrations
+ │   ├── Meowv.Blog.HttpApi ---------- HttpApi
+ │   ├── Meowv.Blog.HttpApi.Hosting ---------- HttpApi.Hosting
+ │   ├── Meowv.Blog.Swagger ---------- Swagger
+ │   └── Meowv.Blog.ToolKits ---------- ToolKits
+ └── static ---------- static
+```
+
+## 技术栈
+
+abp vNext + .NET Core 3.1 + Blazor + JWT + Redis + Hangfire + Mysql + SqlServer + Sqlite + PostgreSql + WebApi + EF Core + Swagger + HtmlAgilityPack + PuppeteerSharp + log4net + MailKit + Docker + Nginx + ...
+
+## 预览
+
+### Blog：[https://meowv.com](https://meowv.com)
 
 ![white](static/white.jpg)
 ![black](static/black.jpg)
 
-此版本个人博客项目基于 .NET Core3.1 开发，可作为 .NET Core 入门项目进行学习，数据库采用 Sqlite，遵循RESTful API接口规范，所有页面采用 axios 和 template-web.js 请求和加载数据，原生JavaScript操作页面。If you liked `Blog` project or if it helped you, please give a star ⭐️ for this repository. 👍👍👍
+### API：[https://api.meowv.com](https://api.meowv.com)
 
-## 技术栈
+![api](static/api.jpg)
 
-- 后端：.NET Core 3.1 + Sqlite + WebApi + EF Core + Swagger
-- 前端：axios + JavaScript + Json
+### Hangfire：[https://api.meowv.com/hangfire](https://api.meowv.com/hangfire)
 
-## 快速体验
+![hangfire](static/hangfire.jpg)
 
-- 下载最新的 [Releases](https://github.com/Meowv/Blog/releases/latest) 包
-- `dotnet run MeowvBlog.Web.dll`
-- 浏览器打开 http://127.0.0.1:5001/ 即可查看效果
+## Donate
 
-## TODO
-
-- [x] 基于 .Net Core 3.1 搭建纯原生开发项目，无第三方框架依赖
-- [x] 项目配置，集成 Swagger 管理 API
-- [x] 自定义 Swagger 扩展
-- [x] Code First 模式开发
-- [x] 图片合并处理，添加水印
-- [x] 读取操作JSON文件
-- [x] 将枚举类型转换为List通用扩展方法
-- [x] API 分组
-- [x] API 基于 JWT模式授权验证
-- [x] Filter 之 Swagger 标签描述
-- [x] 使用 Sqlite 数据库
-- [x] 使用 EntityFrameworkCore.Sqlite 处理数据
-- [x] 核心功能API接口
-- [x] 接入第三方登录,GitHub
-- [x] 前台界面展示
-- [x] 博客核心页面：文章列表、文章详情、分类、标签、分类下的文章列表、标签下的文章列表、友情链接
-- [x] 博客小应用页面：吐个槽、个性艺术签名设计、每日热点、随机猫咪图、每日壁纸、访问数据分析
-- [x] 据导入 MySQL 至 Sqlite
-- [x] 免费生成个性艺术签名API
-- [x] Python抓取各大热门网站热门头条，每日热点API，界面展示
-- [x] 随机一张猫咪图API
-- [x] 微软Bing壁纸抓取，提供API接口
-- [x] MTA网站数据分析
-- [x] 博客后台管理，文章、标签、分类相关的新增编辑删除
-- [x] 瀑布流个人图集相册，添加图集、添加图集对应的图片
-- [x] 基于百度AI语音合成算法，识别用户所在地区生成带有经典语录的问候词音频API
-- [x] 毒鸡汤语录
-- [x] 随机妹子图API和页面
-- [x] 程序员版2048游戏
-- [x] 在线听歌，支持本地缓存
-- [x] 在线听歌，支持播放列表记忆功能
-- [x] 在线听歌，刷新页面不中断歌曲播放
-- [x] 使用 SignalR 技术和支持 Notification 的浏览器实现消息推送功能
-- [x] 腾讯云CDN服务接口化，通过API刷新CDN缓存和刷线历史查询
-- [x] 智能抠图，移除图片背景
-- [x] 腾讯云验证码防水墙接入，防止频繁调用签名页面
-- [x] 手机壁纸，按分类查询，上下页翻页查看，支持点击查看大图
-- [x] 基于BackgroundService的简易后台定时任务
-- [x] PuppeteerSharp访问指定网页并生成图片
-- [x] 基于MailKit和MimeKit发送邮件
-- [ ] ...
-
-## Versions
-
-- [v_1.0.0](https://github.com/Meowv/Blog/tree/v_1.0.0)
-- [v_2.0.0](https://github.com/Meowv/Blog/tree/v_2.0.0)
-- [v_3.0.0](https://github.com/Meowv/Blog/tree/v_3.0.0)
-- [v_3.0.1](https://github.com/Meowv/Blog/tree/v_3.0.1)
-- [v_3.0.x](https://github.com/Meowv/Blog/tree/v_3.0.x)
-- [master](https://github.com/Meowv/Blog)
-
-## Nuget Packages
-
-|Package|Status|
-|:------|:-----:|
-|Baidu.AI|[![NuGet version](https://badge.fury.io/nu/SixLabors.Baidu.AI.svg)](https://badge.fury.io/nu/Baidu.AI)|
-|IP2Region|[![NuGet version](https://badge.fury.io/nu/SixLabors.IP2Region.svg)](https://badge.fury.io/nu/IP2Region)|
-|MailKit|[![NuGet version](https://badge.fury.io/nu/SixLabors.MailKit.svg)](https://badge.fury.io/nu/MailKit)|
-|MimeKit|[![NuGet version](https://badge.fury.io/nu/SixLabors.MimeKit.svg)](https://badge.fury.io/nu/MimeKit)|
-|PuppeteerSharp|[![NuGet version](https://badge.fury.io/nu/SixLabors.PuppeteerSharp.svg)](https://badge.fury.io/nu/PuppeteerSharp)|
-|SixLabors.ImageSharp|[![NuGet version](https://badge.fury.io/nu/SixLabors.ImageSharp.svg)](https://badge.fury.io/nu/SixLabors.ImageSharp)|
-|SixLabors.ImageSharp.Drawing|[![NuGet version](https://badge.fury.io/nu/SixLabors.ImageSharp.Drawing.svg)](https://badge.fury.io/nu/SixLabors.ImageSharp.Drawing)|
-|Swashbuckle.AspNetCore|[![NuGet version](https://badge.fury.io/nu/Swashbuckle.AspNetCore.svg)](https://badge.fury.io/nu/Swashbuckle.AspNetCore)|
-|Swashbuckle.AspNetCore.Filters|[![NuGet version](https://badge.fury.io/nu/Swashbuckle.AspNetCore.Filters.svg)](https://badge.fury.io/nu/Swashbuckle.AspNetCore.Filters)|
-|Microsoft.AspNetCore.Authentication.JwtBearer|[![NuGet version](https://badge.fury.io/nu/Microsoft.AspNetCore.Authentication.JwtBearer.svg)](https://badge.fury.io/nu/Microsoft.AspNetCore.Authentication.JwtBearer)|
-|Microsoft.Extensions.Configuration|[![NuGet version](https://badge.fury.io/nu/Microsoft.Extensions.Configuration.svg)](https://badge.fury.io/nu/Microsoft.Extensions.Configuration)|
-|Microsoft.Extensions.Configuration.FileExtensions|[![NuGet version](https://badge.fury.io/nu/Microsoft.Extensions.Configuration.FileExtensions.svg)](https://badge.fury.io/nu/Microsoft.Extensions.Configuration.FileExtensions)|
-|Microsoft.Extensions.Configuration.Json|[![NuGet version](https://badge.fury.io/nu/Microsoft.Extensions.Configuration.Json.svg)](https://badge.fury.io/nu/Microsoft.Extensions.Configuration.Json)|
-|Microsoft.EntityFrameworkCore.Sqlite|[![NuGet version](https://badge.fury.io/nu/Microsoft.EntityFrameworkCore.Sqlite.svg)](https://badge.fury.io/nu/Microsoft.EntityFrameworkCore.Sqlite)|
-|Microsoft.EntityFrameworkCore.Tools |[![NuGet version](https://badge.fury.io/nu/Microsoft.EntityFrameworkCore.Tools.svg)](https://badge.fury.io/nu/Microsoft.EntityFrameworkCore.Tools )|
-|Microsoft.EntityFrameworkCore.Design|[![NuGet version](https://badge.fury.io/nu/Microsoft.EntityFrameworkCore.Design.svg)](https://badge.fury.io/nu/Microsoft.EntityFrameworkCore.Design)|
-|TencentCloudSDK|[![NuGet version](https://badge.fury.io/nu/TencentCloudSDK.svg)](https://badge.fury.io/nu/TencentCloudSDK)|
+![Donate](static/donate.jpg)
 
 ## LICENSE
 

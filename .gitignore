@@ -17,6 +17,7 @@ bld/
 [Oo]bj/
 [Ll]og/
 .vs/
+.vscode/
 Generated\ Files/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
@@ -118,7 +119,6 @@ ecf/
 rcf/
 AppPackages/
 BundleArtifacts/
-Package.StoreAssociation.xml
 _pkginfo.txt
 *.appx
 *.[Cc]ache
@@ -182,3 +182,4 @@ ASALocalRun/
 .localhistory/
 healthchecksdb
 .local-chromium
+*.xml
